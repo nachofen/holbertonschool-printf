@@ -1,0 +1,87 @@
+.TH PRINTF 3 "2023 C Library Functions"
+
+.SH NAME
+
+printf \- formatted output conversion
+
+.BR
+.SH SYNOPSIS
+
+#include <stdio.h>
+
+int printf(const char *format, ...);
+
+.SH DESCRIPTION
+.BR
+
+The printf() function writes output to stdout, the standard output stream. The function writes the output under the control of a format string specified by the argument format.
+
+.BR
+
+The format string is composed of zero or more directives: ordinary characters (not %), which are copied unchanged to the output stream; and conversion specifications, each of which results in the fetching of zero or more arguments. Each conversion specification is introduced by the % character.
+
+.BR
+
+The following conversion specifiers are supported:
+
+.BR
+
+%c - print a single character
+
+.BR
+
+%s - print a string of characters
+
+.BR
+
+%% - print a % character
+
+
+.SH RETURN VALUE
+The printf() function returns the number of characters printed (excluding the null byte used to end output to strings).
+
+.SH EXAMPLES
+
+The following example demonstrates the use of printf() to print a string and an integer:
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        char *str = "Hello, world!";
+        int num = 42;
+
+        printf("%s\n", str);
+        printf("The answer is %d.\n", num);
+
+        return 0;
+    }
+
+The output of this program would be:
+
+    Hello, world!
+    The answer is 42.
+
+.SH SEE ALSO
+
+sprintf(3), fprintf(3), puts(3), putchar(3)
+
+.SH NOTES
+
+The format string may contain format specifiers that are not supported by the C standard, but are supported by various implementations of printf(), such as the length modifier 'l' for printing long long integers.
+
+.SH BUGS
+
+None known.
+
+.SH AUTHOR
+
+The printf() function was originally written by Dennis Ritchie and Ken Thompson for the Unix operating system.
+
+.SH COPYRIGHT
+
+This manual page is Copyright (C) 2023 by Gise y Nacho
+
+.BR
+
+This manual page was created by Giselle Nieves and Ignacio Martinez Cohort #20.

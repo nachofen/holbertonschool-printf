@@ -33,7 +33,7 @@ int _prints(va_list args)
 	auxs = va_arg(args, char*);
 	if (auxs == NULL)
 	{
-		while (nul[x])
+		while (nul[x] != '\0')
 		{
 			_putchar(nul[x]);
 			contador++;
@@ -64,40 +64,41 @@ int _prints(va_list args)
 int _printint(va_list args)
 {
 	int numgrandeaux;
+       
 	int i = 0, j = 0, menos = 0;
-	unsigned int num = 0, num2 = 0;
+	long int num = 0, num2 = 0;
 	int array[10];
+		numgrandeaux = va_arg(args, int);	
+		num = numgrandeaux;
 
-	numgrandeaux = va_arg(args, int);
-	num = numgrandeaux;
-	if (numgrandeaux < 0)
-	{
-		_putchar('-');
-		menos = 1;
-		num = -numgrandeaux;
-	}
-	num2 = num;
-	while (num2 / 10 >= 1)
-	{
-		j++;
-		num2 = num2 / 10;
-	}
-	while (num > 0 && i <= j)
-	{
-		array[i] = (num % 10) + '0';
-		num = num / 10;
-		i++;
-	}
-	while (i > 0)
-	{
-		i--;
-		_putchar(array[i]);
-	}
+		if (numgrandeaux < 0)
+		{
+			_putchar('-');
+			menos = 1;
+			num = -numgrandeaux;
+		}
+		num2 = num;
+		while (num2 / 10 >= 1)
+		{
+			j++;
+			num2 = num2 / 10;
+		}
+		while (num >= 0 && i <= j)
+		{
+			array[i] = (num % 10) + '0';
+			num = num / 10;
+			i++;
+		}
+		while (i >= 0)
+		{
+			i--;
+			_putchar(array[i]);
+		}
 	return (j + 1 + menos);
 }
 /**
  * _menu - this function handle all the posible cases
- * @format: the format of the following paramter of variadic
+ * @format: the of the following paramter of variadic
  * @args: the list of arguments
  * Return: updated counter
  */
