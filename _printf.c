@@ -64,11 +64,11 @@ int _prints(va_list args)
 int _printint(va_list args)
 {
 	int numgrandeaux;
-       
+
 	int i = 0, j = 0, menos = 0;
 	long int num = 0, num2 = 0;
 	int array[10];
-		numgrandeaux = va_arg(args, int);	
+		numgrandeaux = va_arg(args, int);
 		num = numgrandeaux;
 
 		if (numgrandeaux < 0)
