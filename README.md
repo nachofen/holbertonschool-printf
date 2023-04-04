@@ -29,11 +29,12 @@ this arguments could be ordinary characters, wich are copied unchanged, and conv
 
 <h2>Conversion specifiers</h2>
 
-. d, i: Int argument
-.c: int argument is converted to char, and the resulting character is written
-.s: the constant char* argument is a pointer to a string. We used our own _putchar to print each character of this string. _putchar just prints one character so we used a bucle to print the whole string
-.%: When we face two % in a row no argument is converted and just one % is written increasing the count just by 1
-
+<ul>
+<li> d, i: Int argument</li>
+<li>.c: int argument is converted to char, and the resulting character is written</li>
+<li>.s: the constant char* argument is a pointer to a string. We used our own _putchar to print each character of this string. _putchar just prints one character so we used a bucle to print the whole string</li>
+<li>.%: When we face two % in a row no argument is converted and just one % is written increasing the count just by 1</li>
+</ul>
 <h1>All our functions</h1>
 
 <h2>#int _putchar(char c):</h2>
