@@ -2,22 +2,24 @@
 
 <h2>Requirments</h2>
 
-. Allowed editors: vi, vim, emacs
-. Our code shoud use the Betty style.
-. We are not allowed to use global variables
-. We cant use more than 5 functions per file
-. We have to use a header file called main.h were all the prototypes of our functions should be included
-. The header fil should be guarded and must be pushed
-. Code should be compiled using this flags gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
-
+<ul>
+<li> Allowed editors: vi, vim, emacs</li>
+<li> Our code shoud use the Betty style.</li>
+<li> We are not allowed to use global variables</li>
+<li> We cant use more than 5 functions per file</li>
+<li> We have to use a header file called main.h were all the prototypes of our functions should be included</li>
+<li> The header fil should be guarded and must be pushed</li>
+<li> Code should be compiled using this flags gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c</li>
+</ul>
 <h2>File Descriptions</h2>
 
-. _printf.c: Main printf function where we used the cap of functions(5)
-. main.h: The header file wich contains all the functions that are not in _printf.c
-. _putchar.c: Our own putchar function
-. _putprc: One function that will be called when handling % cases
-. man_3_printf: Manpage of our project
-
+<ul>
+<li> _printf.c: Main printf function where we used the cap of functions(5)</li>
+<li>. main.h: The header file wich contains all the functions that are not in _printf.c</li>
+<li> _putchar.c: Our own putchar function</li>
+<li> _putprc: One function that will be called when handling % cases</li>
+<li> man_3_printf: Manpage of our project</li>
+</ul>
 <h2>Description:</h2>
 
 _printf function: A function that produces output according to a format
