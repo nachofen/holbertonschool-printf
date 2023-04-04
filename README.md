@@ -1,6 +1,6 @@
-##Creating our own printf function in C
+<h1>Creating our own printf function in C</h1>
 
-#Requirments
+<h2>Requirments</h2>
 
 . Allowed editors: vi, vim, emacs
 . Our code shoud use the Betty style.
@@ -10,7 +10,7 @@
 . The header fil should be guarded and must be pushed
 . Code should be compiled using this flags gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
-#File Descriptions
+<h2>File Descriptions</h2>
 
 . _printf.c: Main printf function where we used the cap of functions(5)
 . main.h: The header file wich contains all the functions that are not in _printf.c
@@ -18,21 +18,21 @@
 . _putprc: One function that will be called when handling % cases
 . man_3_printf: Manpage of our project
 
-#Description:
+<h2>Description:</h2>
 
 _printf function: A function that produces output according to a format
 int _printf(const char *format, ...)
 The format string is string of characters, its composed by zero or more arguments
 this arguments could be ordinary characters, wich are copied unchanged, and conversion specifications, wich could have zero or more subsquent arguments
 
-#Conversion specifiers
+<h2>Conversion specifiers</h2>
 
 . d, i: Int argument
 .c: int argument is converted to char, and the resulting character is written
 .s: the constant char* argument is a pointer to a string. We used our own _putchar to print each character of this string. _putchar just prints one character so we used a bucle to print the whole string
 .%: When we face two % in a row no argument is converted and just one % is written increasing the count just by 1
 
-##All our functions
+<h2>All our functions</h2>
 
 #int _putchar(char c):
 
@@ -68,5 +68,5 @@ if an output error comes, a negative value is returned
 
 #Team
 
-Gisselle Nieves - (github)[https://github.com/Gisezegk]
+Gisselle Nieves - (github)[https://github.com/Gisezegki]
 Ignacio Martinez - (github)[https://github.com/nachofen]
