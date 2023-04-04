@@ -50,8 +50,10 @@ The function gets a variadic arguments list, iterates through it, prints each ch
 
 This function gets a variadic arguments list, iterates through it, prints each number of int type and returns the length of the integer.
 
-<h2>#int _menu(const char *format, va_list args): Here is where all the magic happens, we used a switch to handle every posible scenario.
-We had a big challenge avoiding the 40 lines limit of Betty style and for that we had to move the switch to itsown function apart from the main</h2>
+<h2>#int _menu(const char *format, va_list args):</h2>
+
+Here is where all the magic happens, we used a switch to handle every posible scenario.
+We had a big challenge avoiding the 40 lines limit of Betty style and for that we had to move the switch to itsown function apart from the main
 
 <h2>#int _printprc(void):</h2>
 
