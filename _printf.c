@@ -1,6 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include "main.h"
+#include <limits.h>
 /**
  * _printc - this function prints a char
  * @args: the list
@@ -63,19 +64,26 @@ int _prints(va_list args)
  */
 int _printint(va_list args)
 {
-	int numgrandeaux;
 
-	int i = 0, j = 0, menos = 0;
-	long int num = 0, num2 = 0;
-	int array[10];
-		numgrandeaux = va_arg(args, int);
-		num = numgrandeaux;
-
-		if (numgrandeaux < 0)
+	int i = 0, j = 0, menos = 0, minimo = 0;
+	int num = 0,num2 = 0;
+        int array[10];
+	
+		num = va_arg(args, int);
+		
+		
+		if (num == INT_MIN)
+		{
+			_putchar('-');
+			num = INT_MAX / 10;
+			menos = 1;
+			minimo = 1;
+		}
+		if (num < 0)
 		{
 			_putchar('-');
 			menos = 1;
-			num = -numgrandeaux;
+			num = -num;
 		}
 		num2 = num;
 		while (num2 / 10 >= 1)
@@ -89,10 +97,16 @@ int _printint(va_list args)
 			num = num / 10;
 			i++;
 		}
-		while (i >= 0)
+		while (i > 0)
 		{
 			i--;
 			_putchar(array[i]);
+			
+		}
+		if (minimo == 1)
+		{
+			_putchar('8');
+			j++;
 		}
 	return (j + 1 + menos);
 }
